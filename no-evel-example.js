@@ -1,12 +1,13 @@
-var input = '20+20*10';
+//var input = '20+20*10';
+var input = '5 / 7 * 10+2'
 
-spliteExpression(inputString);
+spliteExpression(input);
 
 var outputArray = [];
 var current = '';
 
 function spliteExpression(inputString) {
-
+    outputArray = [];
     for (var i = 0; i < inputString.length; i++) {
         if ('^*/+-'.indexOf(inputString[i]) > -1) {
             outputArray.push(Number(current));
@@ -23,13 +24,13 @@ function spliteExpression(inputString) {
     return evulateExpression(outputArray);
 }
 
-var resultArray = [];
-
 var currentCtx = '';
 function evulateExpression(input) {
-
+    var resultArray = [];
     var operations = [{
         '^': (a,b)=>Math.pow(a, b)
+    }, {
+        '/': (a,b)=>a / b
     }, {
         '*': (a,b)=>a * b
     }, {
@@ -61,3 +62,5 @@ function evulateExpression(input) {
     }
 
 }
+
+//console.log(outputArray);
