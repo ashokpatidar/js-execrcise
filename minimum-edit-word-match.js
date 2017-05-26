@@ -30,3 +30,12 @@ function WordMatch(word1, word2) {
 }
 
 console.log(t)
+
+// if in the table we move digonally then their is subitute
+// from left to right their is insertion
+// top to down deletion
+// https://www.youtube.com/watch?v=b6AGUjqIPsA
+
+
+
+
