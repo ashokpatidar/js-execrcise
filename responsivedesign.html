@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Title</title>
+	<style type="text/css">
+		body{
+			background-color: lightblue;
+			font-size: 24px;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+		}
+
+		main{
+			display: flex;
+			flex-flow: row;
+			min-height: 800px;
+
+		}
+
+		main > article {
+			flex: 3 1 60%;
+			background-color: #bbb;
+			order: 2;
+
+		}
+
+		main > nav{
+			flex: 1 6 20%;
+			background-color: brown;
+			order: 1;
+		}
+
+		main > aside {
+			flex: 1 6 20%;
+			background-color: #eee;
+			order: 3;
+		}
+
+		header, footer {
+			background-color: orange;
+			text-align: center;
+			min-height: 100px;
+		}
+
+		@media all and (max-width: 640px){
+			main{
+				flex-direction: column;
+			}
+
+			header, footer{
+				min-height: 50px;
+				max-height: 50px;
+			}
+		}
+
+	</style>
+</head>
+<body>	
+	<header>Header</header>
+	<main>
+		<article>article</article>
+		<nav>nav</nav>
+		<aside>aside</aside>
+	</main>
+	<footer>footer</footer>
+</body>
+</html>
